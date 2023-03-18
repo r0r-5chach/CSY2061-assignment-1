@@ -1,6 +1,5 @@
 package xyz.r0r5chach.cpsAssist.login;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
@@ -8,11 +7,12 @@ import android.widget.Toast;
 
 import xyz.r0r5chach.cpsAssist.ArrayTools;
 import xyz.r0r5chach.cpsAssist.notes.NotesActivity;
+
 /**
  * This Class defines the definition of the OnCLickListener for the LoginActivity
  * @author r0r5chach
  */
-public class OnClickListener implements View.OnClickListener{
+public class BtnOnClickListener implements View.OnClickListener{
     /**
      * This attribute stores the amount of attempts the user has currently taken
      */
@@ -34,7 +34,7 @@ public class OnClickListener implements View.OnClickListener{
      * @param usernameField the View for the username field of the UI
      * @param passwordField the View for the password field of the UI
      */
-    public OnClickListener(EditText usernameField, EditText passwordField, String users) {
+    public BtnOnClickListener(EditText usernameField, EditText passwordField, String users) {
         initUsers(users);
         this.currentAttempts = 0;
         this.usernameField = usernameField;
@@ -56,7 +56,7 @@ public class OnClickListener implements View.OnClickListener{
             Intent home = new Intent(view.getContext(), NotesActivity.class);
             home.putExtra("username", inputs[0]);
             view.getContext().startActivity(home);
-            ((Activity)view.getContext()).finish();
+            ((android.app.Activity)view.getContext()).finish();
         }
         else {
             currentAttempts += 1;
