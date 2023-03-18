@@ -3,4 +3,5 @@
     <string name="usernameFieldHint">Username</string>
     <string name="passwordFieldHint">Password</string>
     <string name="loginButtonText">Login</string>
+    <string name="users">josh#pass%kofi#pass%jaiwin#pass</string>
 </resources>

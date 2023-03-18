@@ -2,19 +2,12 @@ package xyz.r0r5chach.cpsAssist.login;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Objects;
-import java.util.Properties;
-
 import xyz.r0r5chach.cpsAssist.ArrayTools;
-import xyz.r0r5chach.cpsAssist.home.HomeActivity;
+import xyz.r0r5chach.cpsAssist.notes.NotesActivity;
 /**
  * This Class defines the definition of the OnCLickListener for the LoginActivity
  * @author r0r5chach
@@ -33,10 +26,6 @@ public class OnClickListener implements View.OnClickListener{
      */
     private final EditText passwordField;
     /**
-     * This attribute stores the properties for the activity
-     */
-    private Properties props;
-    /**
      * This attribute stores a list of users' usernames and password
      */
     private String[][] users;
@@ -45,9 +34,8 @@ public class OnClickListener implements View.OnClickListener{
      * @param usernameField the View for the username field of the UI
      * @param passwordField the View for the password field of the UI
      */
-    public OnClickListener(EditText usernameField, EditText passwordField) {
-        loadProperties();
-        initUsers();
+    public OnClickListener(EditText usernameField, EditText passwordField, String users) {
+        initUsers(users);
         this.currentAttempts = 0;
         this.usernameField = usernameField;
         this.passwordField = passwordField;
@@ -65,7 +53,7 @@ public class OnClickListener implements View.OnClickListener{
         }
 
         if (isUser(inputs)) {
-            Intent home = new Intent(view.getContext(), HomeActivity.class);
+            Intent home = new Intent(view.getContext(), NotesActivity.class);
             home.putExtra("username", inputs[0]);
             view.getContext().startActivity(home);
             ((Activity)view.getContext()).finish();
@@ -76,24 +64,10 @@ public class OnClickListener implements View.OnClickListener{
         }
     }
     /**
-     * This method loads the properties for the activity from resources
-     */
-    private void loadProperties() {
-        props = new Properties();
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                props.loadFromXML(Files.newInputStream(Paths.get(Objects.requireNonNull(LoginActivity.class.getResource("values/properties_login.xml")).getPath())));
-            }
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    /**
      * This method initializes the users array from the activity properties
      */
-    private void initUsers() {
-        String[] users = props.getProperty("users").split("%");
+    private void initUsers(String usersString) {
+        String[] users = usersString.split("%");
         this.users = new String[users.length][2];
         for (int i = 0; i < users.length; i++) {
             String[] details = users[i].split("#");
