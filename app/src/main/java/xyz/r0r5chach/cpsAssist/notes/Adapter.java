@@ -15,10 +15,10 @@ import xyz.r0r5chach.cpsAssist.R;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
-    private final List<File> notes;
+    private final Notes notes;
 
-    public Adapter(List<File> notes) {
-        this.notes = notes;
+    public Adapter(File path, String username) {
+        notes = getStoredNotes(path, username);
     }
 
     @NonNull
@@ -30,15 +30,22 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int index) {
-        File note = notes.get(index);
+        File note = notes.getNote(index);
         holder.getFileName().setText(note.getName());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return notes.getAmount();
     }
 
+    public Notes getNotes() {
+        return notes;
+    }
+
+    private Notes getStoredNotes(File path, String username) {
+        return new Notes(path, username);
+    }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView fileName;

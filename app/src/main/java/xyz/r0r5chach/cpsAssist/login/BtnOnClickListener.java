@@ -1,5 +1,6 @@
 package xyz.r0r5chach.cpsAssist.login;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
@@ -56,7 +57,8 @@ public class BtnOnClickListener implements View.OnClickListener{
             Intent home = new Intent(view.getContext(), NotesActivity.class);
             home.putExtra("username", inputs[0]);
             view.getContext().startActivity(home);
-            ((android.app.Activity)view.getContext()).finish();
+            Activity login = (Activity) view.getContext();
+            login.finish();
         }
         else {
             currentAttempts += 1;
