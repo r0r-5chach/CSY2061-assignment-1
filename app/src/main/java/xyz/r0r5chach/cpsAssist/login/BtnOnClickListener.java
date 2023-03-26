@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import xyz.r0r5chach.cpsAssist.ArrayTools;
+import xyz.r0r5chach.cpsAssist.main.MainActivity;
 import xyz.r0r5chach.cpsAssist.notes.NotesActivity;
 /**
  * This Class defines the definition of the OnCLickListener for the LoginActivity
@@ -53,7 +54,7 @@ public class BtnOnClickListener implements View.OnClickListener{
         }
 
         if (isUser(inputs)) {
-            Intent home = new Intent(view.getContext(), NotesActivity.class);
+            Intent home = new Intent(view.getContext(), MainActivity.class);
             home.putExtra("username", inputs[0]);
             view.getContext().startActivity(home);
             Activity login = (Activity) view.getContext();

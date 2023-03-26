@@ -24,7 +24,11 @@ public class Notes {
     }
 
     private void getStoredNotes() {
-        notes.addAll(Arrays.asList(Objects.requireNonNull(rootDir.listFiles())));
+        for (File note: Objects.requireNonNull(rootDir.listFiles())) {
+            if (note.getName().contains(username)) {
+                notes.add(note);
+            }
+        }
     }
 
     public void createNote() {

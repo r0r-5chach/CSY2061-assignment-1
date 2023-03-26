@@ -9,12 +9,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import org.w3c.dom.Text;
-
 import java.io.File;
 import java.util.Locale;
 import java.util.Scanner;
 
+import xyz.r0r5chach.cpsAssist.BtnID;
 import xyz.r0r5chach.cpsAssist.R;
 
 

@@ -17,6 +17,7 @@ public class NotesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
         initRecycler();
+        setTitle("Notes- " + getIntent().getStringExtra("username"));
         findViewById(R.id.add_Button).setOnClickListener(new BtnOnClickListener(adapter));
     }
 
