@@ -36,6 +36,7 @@ public class BtnOnClickListener implements View.OnClickListener{
                 break;
             case DICE_BUTTON:
                 intent = new Intent(v.getContext(), DiceActivity.class);
+                break;
             case BACKGROUND_BUTTON:
                 Random rand = new Random();
                 backgroundColor = String.format("#%06x", rand.nextInt(0xffffff + 1));
