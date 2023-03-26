@@ -80,13 +80,6 @@ public class BtnOnClickListener implements View.OnClickListener {
         return builder.create();
     }
 
-    private AlertDialog viewDialog(View v) {
-        AlertDialog.Builder dialog = new AlertDialog.Builder(v.getContext());
-        dialog.setTitle("View Note");
-        dialog.setMessage("note"); //TODO: Get selected file's note
-        return dialog.create();
-    }
-
     private void initNoteText(TextView editField, File note) {
         try {
             Scanner r = new Scanner(note);
