@@ -5,12 +5,16 @@
     <string name="passwordFieldHint">Password</string>
     <string name="loginButtonText">Login</string>
     <string name="users">josh#pass%kofi#pass%jaiwin#pass</string>
+    <string name="questions">What is the capital of the UK?#What is the electron count of helium?#What does RAM stand for?#What is the boiling point of water?#When did WWII end?</string>
+    <string name="correct_answers">London#2#Random Access Memory#100 degrees celsius#1945</string>
+    <string name="incorrect_answers">New York City%Paris%Madrid#5%6%9%64#Read Admin Memory%Rapid Access Memory#0 degrees celsius%20 degrees celsius#2001%1666%1920</string>
     <string name="title_activity_notes">NotesActivity</string>
     <!-- Notes View -->
     <string name="addButtonText">Add</string>
     <string name="editButtonText">Edit</string>
     <string name="deleteButtonText">Delete</string>
-    <string name="note_edit_hint">Note</string>
+    <string name="note_edit_hint">Notes</string>
     <string name="saveButtonText">Save</string>
     <string name="quiz_button_text">Quiz</string>
+    <string name="submit_button_text">Submit</string>
 </resources>

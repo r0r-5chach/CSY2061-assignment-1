@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="question" type="id" />
+    <item name="question1" type="id" />
+    <item name="question2" type="id" />
+    <item name="question3" type="id" />
+    <item name="question4" type="id" />
+    <item name="question5" type="id"/>
+</resources>

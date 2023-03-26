@@ -13,11 +13,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("Home- " + getIntent().getStringExtra("username"));
-        findViewById(R.id.notes_button).setOnClickListener(new BtnOnClickListener());
+        initButtons();
     }
 
     @Override
     public void onBackPressed() {
         finish();
+    }
+
+    private void initButtons() {
+        findViewById(R.id.notes_button).setOnClickListener(new BtnOnClickListener());
+        findViewById(R.id.quiz_button).setOnClickListener(new BtnOnClickListener());
     }
 }
