@@ -22,4 +22,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/change_background_button_text" />
+    <Button
+        android:id="@+id/dice_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dice_roller_button_text"/>
 </LinearLayout>

@@ -6,5 +6,7 @@ public enum BtnID {
     DELETE_BUTTON,
     NOTES_BUTTON,
     QUIZ_BUTTON,
+    DICE_BUTTON,
     BACKGROUND_BUTTON
+
 }

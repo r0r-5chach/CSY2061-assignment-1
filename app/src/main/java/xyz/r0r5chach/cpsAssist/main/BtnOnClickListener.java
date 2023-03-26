@@ -10,6 +10,7 @@ import java.util.Locale;
 import java.util.Random;
 
 import xyz.r0r5chach.cpsAssist.BtnID;
+import xyz.r0r5chach.cpsAssist.dice.DiceActivity;
 import xyz.r0r5chach.cpsAssist.R;
 import xyz.r0r5chach.cpsAssist.quiz.QuizActivity;
 import xyz.r0r5chach.cpsAssist.notes.NotesActivity;
@@ -33,6 +34,8 @@ public class BtnOnClickListener implements View.OnClickListener{
             case QUIZ_BUTTON:
                 intent = new Intent(v.getContext(), QuizActivity.class);
                 break;
+            case DICE_BUTTON:
+                intent = new Intent(v.getContext(), DiceActivity.class);
             case BACKGROUND_BUTTON:
                 Random rand = new Random();
                 backgroundColor = String.format("#%06x", rand.nextInt(0xffffff + 1));
