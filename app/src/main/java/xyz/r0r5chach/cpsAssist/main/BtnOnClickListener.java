@@ -7,6 +7,7 @@ import android.view.View;
 import java.util.Locale;
 
 import xyz.r0r5chach.cpsAssist.BtnID;
+import xyz.r0r5chach.cpsAssist.dice.DiceActivity;
 import xyz.r0r5chach.cpsAssist.quiz.QuizActivity;
 import xyz.r0r5chach.cpsAssist.notes.NotesActivity;
 
@@ -21,6 +22,9 @@ public class BtnOnClickListener implements View.OnClickListener{
                 break;
             case QUIZ_BUTTON:
                 intent = new Intent(v.getContext(), QuizActivity.class);
+                break;
+            case DICE_BUTTON:
+                intent = new Intent(v.getContext(), DiceActivity.class);
                 break;
         }
         Activity main = (Activity) v.getContext();

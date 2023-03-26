@@ -17,4 +17,7 @@
     <string name="saveButtonText">Save</string>
     <string name="quiz_button_text">Quiz</string>
     <string name="submit_button_text">Submit</string>
+    <string name="dice_hint">How many sides do you want the dice to have?</string>
+    <string name="dice_button_text">Roll</string>
+    <string name="dice_roller_button_text">Dice Roller</string>
 </resources>

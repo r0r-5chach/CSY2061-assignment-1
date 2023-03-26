@@ -15,7 +15,9 @@
             android:exported="false"
             android:label="@string/title_activity_notes"/>
         <activity android:name=".main.MainActivity"/>
+
         <activity android:name=".quiz.QuizActivity"/>
+        <activity android:name=".dice.DiceActivity"/>
         <activity
             android:name=".login.LoginActivity"
             android:exported="true">

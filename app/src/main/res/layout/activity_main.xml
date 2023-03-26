@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main_layout"
     android:orientation="vertical">
 
     <Button
@@ -15,4 +16,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/quiz_button_text" />
+
+    <Button
+        android:id="@+id/background_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello" />
+    <Button
+        android:id="@+id/dice_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dice_roller_button_text"/>
 </LinearLayout>

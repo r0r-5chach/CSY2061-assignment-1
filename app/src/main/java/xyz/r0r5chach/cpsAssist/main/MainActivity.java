@@ -24,5 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private void initButtons() {
         findViewById(R.id.notes_button).setOnClickListener(new BtnOnClickListener());
         findViewById(R.id.quiz_button).setOnClickListener(new BtnOnClickListener());
+        findViewById(R.id.dice_button).setOnClickListener(new BtnOnClickListener());
     }
 }
