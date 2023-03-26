@@ -21,7 +21,7 @@
         android:id="@+id/background_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hello" />
+        android:text="@string/change_background_button_text" />
     <Button
         android:id="@+id/dice_button"
         android:layout_width="match_parent"

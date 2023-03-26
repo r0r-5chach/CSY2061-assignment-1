@@ -1,5 +1,6 @@
 package xyz.r0r5chach.cpsAssist.quiz;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -21,6 +22,9 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         setTitle("Quiz- " + getIntent().getStringExtra("username"));
+        if (getIntent().hasExtra("background")) {
+            findViewById(R.id.quiz_layout).setBackgroundColor(Color.parseColor(getIntent().getStringExtra("background")));
+        }
         LinearLayout layout = findViewById(R.id.quiz_layout);
         quiz = new Quiz(getString(R.string.questions), getString(R.string.correct_answers), getString(R.string.incorrect_answers));
         initQuestions(layout);

@@ -1,5 +1,6 @@
 package xyz.r0r5chach.cpsAssist.main;
 
+import android.media.MediaDrm;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +23,10 @@ public class MainActivity extends AppCompatActivity {
     } //TODO: Add change background button to layout and add logic to listner
 
     private void initButtons() {
-        findViewById(R.id.notes_button).setOnClickListener(new BtnOnClickListener());
-        findViewById(R.id.quiz_button).setOnClickListener(new BtnOnClickListener());
-        findViewById(R.id.dice_button).setOnClickListener(new BtnOnClickListener());
+        BtnOnClickListener lstn = new BtnOnClickListener();
+        findViewById(R.id.notes_button).setOnClickListener(lstn);
+        findViewById(R.id.quiz_button).setOnClickListener(lstn);
+        findViewById(R.id.background_button).setOnClickListener(lstn);
+        findViewById(R.id.dice_button).setOnClickListener(lstn);
     }
 }
