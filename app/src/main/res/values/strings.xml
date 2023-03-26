@@ -12,4 +12,5 @@
     <string name="deleteButtonText">Delete</string>
     <string name="note_edit_hint">Note</string>
     <string name="saveButtonText">Save</string>
+    <string name="quiz_button_text">Quiz</string>
 </resources>
