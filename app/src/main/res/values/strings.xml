@@ -17,4 +17,5 @@
     <string name="saveButtonText">Save</string>
     <string name="quiz_button_text">Quiz</string>
     <string name="submit_button_text">Submit</string>
+    <string name="change_background_button_text">Change Background</string>
 </resources>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -18,6 +19,9 @@ public class NotesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_notes);
         initRecycler();
         setTitle("Notes- " + getIntent().getStringExtra("username"));
+        if (getIntent().hasExtra("background")) {
+            findViewById(R.id.notes_layout).setBackgroundColor(Color.parseColor(getIntent().getStringExtra("background")));
+        }
         findViewById(R.id.add_Button).setOnClickListener(new BtnOnClickListener(adapter));
     }
 
