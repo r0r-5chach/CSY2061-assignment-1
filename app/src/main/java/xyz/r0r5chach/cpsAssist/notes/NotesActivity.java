@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import xyz.r0r5chach.cpsAssist.R;
 
@@ -21,8 +22,9 @@ public class NotesActivity extends AppCompatActivity {
 
     private void initRecycler() {
         RecyclerView list = findViewById(R.id.notesList);
-        adapter = new Adapter(getFilesDir(), getIntent().getStringExtra("username"));
+        adapter = new Adapter(getExternalFilesDir(null), getIntent().getStringExtra("username"));
         list.setAdapter(adapter);
         list.setLayoutManager(new LinearLayoutManager(this));
+        adapter.notifyItemRangeChanged(0, adapter.getItemCount());
     }
 }

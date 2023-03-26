@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import xyz.r0r5chach.cpsAssist.ArrayTools;
 import xyz.r0r5chach.cpsAssist.notes.NotesActivity;
-
 /**
  * This Class defines the definition of the OnCLickListener for the LoginActivity
  * @author r0r5chach
@@ -112,7 +111,7 @@ public class BtnOnClickListener implements View.OnClickListener{
      */
     private boolean isUser(String[] inputs) {
         for (String[] user: users) {
-            if (inputs[0].equals(user[0]) || inputs[1].equals(user[1])) {
+            if (inputs[0].equals(user[0]) && inputs[1].equals(user[1])) {
                 return true;
             }
         }
