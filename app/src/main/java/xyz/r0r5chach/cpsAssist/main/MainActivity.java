@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
-    }
+    } //TODO: Add change background button to layout and add logic to listner
 
     private void initButtons() {
         findViewById(R.id.notes_button).setOnClickListener(new BtnOnClickListener());
