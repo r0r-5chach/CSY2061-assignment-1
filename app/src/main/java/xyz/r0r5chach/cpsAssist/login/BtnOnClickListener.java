@@ -7,12 +7,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import xyz.r0r5chach.cpsAssist.ArrayTools;
+import xyz.r0r5chach.cpsAssist.main.MainActivity;
 import xyz.r0r5chach.cpsAssist.notes.NotesActivity;
 /**
  * This Class defines the definition of the OnCLickListener for the LoginActivity
  * @author r0r5chach
  */
-public class OnClickListener implements View.OnClickListener{
+public class BtnOnClickListener implements View.OnClickListener{
     /**
      * This attribute stores the amount of attempts the user has currently taken
      */
@@ -34,7 +35,7 @@ public class OnClickListener implements View.OnClickListener{
      * @param usernameField the View for the username field of the UI
      * @param passwordField the View for the password field of the UI
      */
-    public OnClickListener(EditText usernameField, EditText passwordField, String users) {
+    public BtnOnClickListener(EditText usernameField, EditText passwordField, String users) {
         initUsers(users);
         this.currentAttempts = 0;
         this.usernameField = usernameField;
@@ -53,10 +54,11 @@ public class OnClickListener implements View.OnClickListener{
         }
 
         if (isUser(inputs)) {
-            Intent home = new Intent(view.getContext(), NotesActivity.class);
+            Intent home = new Intent(view.getContext(), MainActivity.class);
             home.putExtra("username", inputs[0]);
             view.getContext().startActivity(home);
-            ((Activity)view.getContext()).finish();
+            Activity login = (Activity) view.getContext();
+            login.finish();
         }
         else {
             currentAttempts += 1;
@@ -110,7 +112,7 @@ public class OnClickListener implements View.OnClickListener{
      */
     private boolean isUser(String[] inputs) {
         for (String[] user: users) {
-            if (inputs[0].equals(user[0]) || inputs[1].equals(user[1])) {
+            if (inputs[0].equals(user[0]) && inputs[1].equals(user[1])) {
                 return true;
             }
         }
