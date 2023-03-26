@@ -20,6 +20,7 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        setTitle("Quiz- " + getIntent().getStringExtra("username"));
         LinearLayout layout = findViewById(R.id.quiz_layout);
         quiz = new Quiz(getString(R.string.questions), getString(R.string.correct_answers), getString(R.string.incorrect_answers));
         initQuestions(layout);
